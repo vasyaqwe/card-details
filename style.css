@@ -72,6 +72,7 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 input {
@@ -145,8 +146,17 @@ input {
   border-radius: .4rem;
 }
 
+.input-wrapper {
+  position: relative;
+}
+
 .error {
+  position: absolute;
+  right: 0;
   display: none;
+  color: var(--clr-accent-400);
+  font-size: .7rem;
+  white-space: nowrap;
 }
 
 .form {
@@ -162,9 +172,8 @@ input {
   border: 1px solid transparent;
 }
 
-.input:invalid+.error {
-  display: block;
-
+.input:valid+.error {
+  display: none;
 }
 
 .input::placeholder {
@@ -304,6 +313,6 @@ input {
 
   .card--back__cvc {
     right: 3.5rem;
-    top: 44%;
+    top: 44.3%;
   }
 }
